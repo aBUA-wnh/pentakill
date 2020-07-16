@@ -1,0 +1,20 @@
+/* 用户头像 */
+.user_box{
+	width: 30px;
+    height: 30px;
+    background: url("../images/IMG_8322.JPG") no-repeat;
+	background-size: 30px 30px;
+	background-position: center;
+    border-radius: 50%;
+	border: 2px solid rgba(255,255,255,0.12);
+	cursor: pointer;
+}
+.small{
+	position: absolute;
+	right: 0;
+	margin: 10px 15px 10px 10px;
+}
+.big{
+	position: absolute;
+	margin: 10px 10px 10px 12px;
+}

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 蒙版 -->
+		<div class="popup-mask"></div>
+		<!-- 导航菜单 -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<!-- 汉堡菜单 -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+						<span class="icon-bar" style="width: 18px;"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar" style="width: 12px;"></span>
+					</button>
+					<!-- logo -->
+					<a class="navbar-brand" href="#">
+						<img src="images/pentakill_logo.png">
+					</a>
+					<div class="userinfo_box">
+						<!-- 小屏幕登录按钮 -->
+						<span class="user_sign">登录</span>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<div class="navbar_nav">
+						<ul class="nav navbar-nav">
+							<li><a href="#mv-part">MV</a></li>
+							<li><a href="#album-part">专辑</a></li>
+							<li><a href="#commodity-part">周边</a></li>
+							<li><a href="#band-part">乐队</a></li>
+							<li><a href="#tour-part">巡演</a></li>
+							<li class="separator sign_hide"></li>
+							<li class="sign_hide"><a href="#" class="sign_a">登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- 登录框 -->
+		<div class="sign" id="sign">
+			<!-- 关闭按钮 -->
+			<a href="#" class="a_close"></a>
+
+			<h2 class="sign_title">登录</h2>
+			<form method="post" action="login.php">
+				<div class="usersign">
+					<!-- autocomplete="off":关闭自动填充功能 -->
+					<input type="text" name="username" autocomplete="off" placeholder="&nbsp;支持QQ号/邮箱/手机号登录" class="usersign_input">
+					<input type="password" name="password" placeholder="&nbsp;密码" class="usersign_input">
+					<input type="button" class="usersign_but" id="usersign_but" value="授权并登录">
+				</div>
+			</form>
+			<a href="#" class="login_a forget">忘了密码?</a>
+			<a href="#" class="login_a register">注册新账号</a>
+			<a href="#" class="login_a feedback">意见反馈</a>
+		</div>
+
+		<!-- 封面 -->
+		<div class="container-fluid page_box">
+			<div class="title">
+				<h1 class="title_h1">
+					五杀乐队
+					<span class="loop-ani-traced-move">五杀乐队</span>
+				</h1>
+				<h2 class="cover_title_h2">你曾播下种子。现在你该收割了。</h2>
+			</div>
+			<div class="cover_bg">
+				<div class="cover_fg"></div>
+				<div class="cont_box_big_cover">
+					<div class="cont_box_small">
+						<div class="cont_box">
+							<a href="#" class="mordekaiser_link">
+								<h3 class="link_h3">莫德凯撒</h3>
+							</a>
+							<div class="cover_band_cont mordekaiser"></div>
+							<a href="#" class="karthus_link">
+								<h3 class="link_h3">卡尔萨斯</h3>
+							</a>
+							<div class="cover_band_cont karthus"></div>
+							<a href="#" class="yorick_link">
+								<h3 class="link_h3">约里克</h3>
+							</a>
+							<div class="cover_band_cont yorick"></div>
+							<a href="#" class="sona_link">
+								<h3 class="link_h3">娑娜</h3>
+							</a>
+							<div class="cover_band_cont sona"></div>
+							<a href="#" class="olaf_link">
+								<h3 class="link_h3">奥拉夫</h3>
+							</a>
+							<div class="cover_band_cont olaf"></div>
+							<a href="#" class="kayle_link">
+								<h3 class="link_h3">凯尔</h3>
+							</a>
+							<div class="cover_band_cont kayle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MV -->
+		<div class="container-fluid page_box" id="mv-part">
+			<div class="title mv_title">
+				<h4 class="title_h4">五杀乐队</h4>
+				<h1 class="title_h1">
+					MV
+					<span class="loop-ani-traced-move">MV</span>
+				</h1>
+			</div>
+			<div class="cont_box_big_mv">
+				<div class="cont_box_small">
+					<div class="cont_box">
+						<video class="mv_video" preload="auto" muted autoplay loop>
+							<source src="video/mv_cover.mp4" type="video/mp4">
+						</video>
+						<div class="mv_name_box">
+							<div class="mv_name">
+								<h3 class="title_h3">凡性的提醒</h3>
+							</div>
+						</div>
+						<div class="mv_play">
+							<a href="#" class="mv_play_border" id="mv_play">
+								<div class="mv_icon">
+									<img src="images/index/paly.png" class="mv_play_icon normal" id="mv_play_normal">
+									<img src="images/index/paly.png" class="mv_play_icon hover" id="mv_play_hover">
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 专辑 -->
+		<div class="container-fluid page_box" id="album-part">
+			<div class="close-but-hover">
+				<span class="close-but"></span>
+			</div>
+			<div class="collection">
+				<div id="title-move-t">
+					<div class="title">
+						<h4 class="title_h4">五杀乐队</h4>
+						<h1 class="title_h1">
+							专辑
+							<span class="loop-ani-traced-move">专辑</span>
+						</h1>
+					</div>
+				</div>
+				<div class="row album-row">
+					<div class="flexbox">
+						<div class="col-sm-4">
+							<div id="box-move-l">
+								<div class="album-img-box" id="cyr-button">
+									<img src="images/album/cyr.jpg" class="album-img">
+								</div>
+							</div>
+							<div class="album-info" id="album-info-l">
+								<div class="title-move-l">
+									<h1 class="title_h1">
+										《惩与燃》
+										<span class="loop-ani-traced-move">《惩与燃》</span>
+									</h1>
+								</div>
+								<h2>Smite and Lgnite</h2>
+								<p>英雄联盟首张五杀主题音乐专辑《惩与燃》，该专辑以五杀摇滚乐队为主体，专辑也属于摇滚风。值得一提的是，专辑名的“惩”与“燃”分别是召唤师技能“惩戒（Smite）”和“引燃（Ignite）”。除此之外，专辑内的每一首歌名都是以装备名来命名的。</p>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div id="box-move-r">
+								<div class="album-img-box" id="bmzw-button">
+									<img src="images/album/bmzw.jpg" class="album-img">
+								</div>
+							</div>
+							<div class="album-info" id="album-info-r">
+								<div class="title-move-r">
+									<h1 class="title_h1">
+										《不灭之握》
+										<span class="loop-ani-traced-move">《不灭之握》</span>
+									</h1>
+								</div>
+								<h2>Grasp of the Undying</h2>
+								<p>英雄联盟五杀乐队全新音乐专辑《Grasp of the Undying 不灭之握》于2017年8月5日发布！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 惩与燃 -->
+			<div class="album-cyr">
+				<!-- 过渡div -->
+				<div id="cyr-title">
+					<div class="title">
+						<h4 class="title_h4">五杀乐队</h4>
+						<h1 class="title_h1">
+							《惩与燃》
+							<span class="loop-ani-traced-move">《惩与燃》</span>
+						</h1>
+					</div>
+				</div>
+				<div class="content">
+					<div class="album_cont_box">
+						<!-- 左切换按钮 -->
+						<button class="single_left" id="cyr_left_but">
+							<div class="inner">
+								<div class="inner">
+									<div class="prev-imgs-wrap overflow-list-wrap">
+										<ul class="prev-imgs" id="prev-imgs1">
+											<li class="track-thumb" style="background-image: url(images/album/101.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/102.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/103.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/104.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/105.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/106.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/107.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/108.jpg);"></li>
+										</ul>
+									</div>
+									<div class="prev-next-overlay"></div>
+									<div class="prev-content-wrap overflow-list-wrap">
+										<ul class="previnf" id="previnf1">
+											<li>
+												<h4>曲目 01</h4>
+												<h2>光明使者</h2>
+												<h4>04:56</h4>
+											</li>
+											<li>
+												<h4>曲目 02</h4>
+												<h2>冥火之拥</h2>
+												<h4>04:00</h4>
+											</li>
+											<li>
+												<h4>曲目 03</h4>
+												<h2>干扰水晶</h2>
+												<h4>05:18</h4>
+											</li>
+											<li>
+												<h4>曲目 04</h4>
+												<h2>最后的轻语</h2>
+												<h4>03:37</h4>
+											</li>
+											<li>
+												<h4>曲目 05</h4>
+												<h2>海克斯核心</h2>
+												<h4>04:33</h4>
+											</li>
+											<li>
+												<h4>曲目 06</h4>
+												<h2>预言</h2>
+												<h4>00:47</h4>
+											</li>
+											<li>
+												<h4>曲目 07</h4>
+												<h2>荆棘之甲</h2>
+												<h4>03:43</h4>
+											</li>
+											<li>
+												<h4>曲目 08</h4>
+												<h2>凛冬法球</h2>
+												<h4>03:31</h4>
+											</li>
+										</ul>
+									</div>
+									<span class="arrow-left prev-btn"></span>
+								</div>
+							</div>
+						</button>
+						<!-- 中间主要显示部分 -->
+						<div class="single_middle" id="single_middle1">
+							<button class="cover">
+								<div class="inner">
+									<div class="inner">
+										<div class="img-carousel">
+											<div class="img-carousel-overflow-overflow">
+												<div class="img-carousel-overflow">
+													<div class="img-wrap overflow-list-wrap">
+														<ul class="imgs" id="imgs1">
+															<li class="img track-thumb" style="background-image: url(images/album/101.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/102.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/103.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/104.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/105.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/106.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/107.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/108.jpg)"></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="single_inf">
+											<div class="overflow-list-wrap">
+												<ul class="single_title" id="single_title1">
+													<li>
+														<h4>曲目 01</h4>
+													</li>
+													<li>
+														<h4>曲目 02</h4>
+													</li>
+													<li>
+														<h4>曲目 03</h4>
+													</li>
+													<li>
+														<h4>曲目 04</h4>
+													</li>
+													<li>
+														<h4>曲目 05</h4>
+													</li>
+													<li>
+														<h4>曲目 06</h4>
+													</li>
+													<li>
+														<h4>曲目 07</h4>
+													</li>
+													<li>
+														<h4>曲目 08</h4>
+													</li>
+												</ul>
+											</div>
+											<div class="overflow-list-wrap title-overflow">
+												<ul class="singlename" id="singlename1">
+													<li>
+														<h3>光明使者</h3>
+													</li>
+													<li>
+														<h3>冥火之拥</h3>
+													</li>
+													<li>
+														<h3>干扰水晶</h3>
+													</li>
+													<li>
+														<h3>最后的轻语</h3>
+													</li>
+													<li>
+														<h3>海克斯核心</h3>
+													</li>
+													<li>
+														<h3>预言</h3>
+													</li>
+													<li>
+														<h3>荆棘之甲</h3>
+													</li>
+													<li>
+														<h3>凛冬法球</h3>
+													</li>
+												</ul>
+											</div>
+											<div class="overflow-list-wrap">
+												<ul class="singletime" id="singletime1">
+													<li>
+														<h4>04:56</h4>
+													</li>
+													<li>
+														<h4>04:00</h4>
+													</li>
+													<li>
+														<h4>05:18</h4>
+													</li>
+													<li>
+														<h4>03:37</h4>
+													</li>
+													<li>
+														<h4>04:33</h4>
+													</li>
+													<li>
+														<h4>00:47</h4>
+													</li>
+													<li>
+														<h4>03:43</h4>
+													</li>
+													<li>
+														<h4>03:31</h4>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="play-btn-wrap">
+											<a href="#" class="mv_play_border large" id="album_play1">
+												<div class="mv_icon">
+													<img src="images/index/paly.png" class="mv_play_icon normal" id="single_paly_normal1">
+													<img src="images/index/paly.png" class="mv_play_icon hover" id="single_paly_hover1">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</button>
+						</div>
+						<!-- 右切换按钮 -->
+						<button class="single_right" id="cyr_right_but">
+							<div class="inner">
+								<div class="inner">
+									<div class="next-imgs-wrap overflow-list-wrap">
+										<ul class="next-imgs" id="next-imgs1">
+											<li class="track-thumb" style="background-image: url(images/album/101.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/102.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/103.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/104.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/105.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/106.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/107.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/108.jpg);"></li>
+										</ul>
+									</div>
+									<div class="prev-next-overlay"></div>
+									<div class="next-content-wrap overflow-list-wrap">
+										<ul class="nextinf" id="nextinf1">
+											<li>
+												<h4>曲目 01</h4>
+												<h2>光明使者</h2>
+												<h4>04:56</h4>
+											</li>
+											<li>
+												<h4>曲目 02</h4>
+												<h2>冥火之拥</h2>
+												<h4>04:00</h4>
+											</li>
+											<li>
+												<h4>曲目 03</h4>
+												<h2>干扰水晶</h2>
+												<h4>05:18</h4>
+											</li>
+											<li>
+												<h4>曲目 04</h4>
+												<h2>最后的轻语</h2>
+												<h4>03:37</h4>
+											</li>
+											<li>
+												<h4>曲目 05</h4>
+												<h2>海克斯核心</h2>
+												<h4>04:33</h4>
+											</li>
+											<li>
+												<h4>曲目 06</h4>
+												<h2>预言</h2>
+												<h4>00:47</h4>
+											</li>
+											<li>
+												<h4>曲目 07</h4>
+												<h2>荆棘之甲</h2>
+												<h4>03:43</h4>
+											</li>
+											<li>
+												<h4>曲目 08</h4>
+												<h2>凛冬法球</h2>
+												<h4>03:31</h4>
+											</li>
+										</ul>
+									</div>
+									<span class="arrow-right next-btn"></span>
+								</div>
+							</div>
+						</button>
+						<div class="track-number-carousel-container" id="cyr-song">
+							<div class="labels">
+								<span class="text">曲目</span>
+							</div>
+							<div class="carousel-wrapper" style="width: 270px;">
+								<div class="carousel owl-carousel owl-loaded">
+									<div class="owl-stage-outer">
+										<div class="owl-stage" style="width: 780px;transform: translate3d(-150px, 0px, 0px);">
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="0">01</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="1">02</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="2">03</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="3">04</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="4">05</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="5">06</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="6">07</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item active center"><button class="track-button" type="button" data-index="0">01</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="1">02</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="2">03</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="3">04</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="4">05</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="5">06</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="6">07</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="0">01</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="1">02</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="2">03</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="3">04</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="4">05</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="5">06</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="6">07</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="0">01</button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 不灭之握 -->
+			<div class="album-bmzw">
+				<!-- 过渡div -->
+				<div id="bmzw-title">
+					<div class="title">
+						<h4 class="title_h4">五杀乐队</h4>
+						<h1 class="title_h1">
+							《不灭之握》
+							<span class="loop-ani-traced-move">《不灭之握》</span>
+						</h1>
+					</div>
+				</div>
+				<div class="content">
+					<div class="album_cont_box">
+						<!-- 左切换按钮 -->
+						<button class="single_left" id="bmzw_left_but">
+							<div class="inner">
+								<div class="inner">
+									<div class="prev-imgs-wrap overflow-list-wrap">
+										<ul class="prev-imgs" id="prev-imgs2">
+											<li class="track-thumb" style="background-image: url(images/album/1001.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1002.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1003.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1004.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1005.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1006.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1007.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1008.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1009.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1010.jpg);"></li>
+										</ul>
+									</div>
+									<div class="prev-next-overlay"></div>
+									<div class="prev-content-wrap overflow-list-wrap">
+										<ul class="previnf" id="previnf2">
+											<li>
+												<h4>曲目 01</h4>
+												<h2>萃取</h2>
+												<h4>05:16</h4>
+											</li>
+											<li>
+												<h4>曲目 02</h4>
+												<h2>凡性的提醒</h2>
+												<h4>04:04</h4>
+											</li>
+											<li>
+												<h4>曲目 03</h4>
+												<h2>女神之泪</h2>
+												<h4>04:00</h4>
+											</li>
+											<li>
+												<h4>曲目 04</h4>
+												<h2>无尽之刃</h2>
+												<h4>04:00</h4>
+											</li>
+											<li>
+												<h4>曲目 05</h4>
+												<h2>亡者的板甲</h2>
+												<h4>04:50</h4>
+											</li>
+											<li>
+												<h4>曲目 06</h4>
+												<h2>海克斯核心 mk-2</h2>
+												<h4>03:26</h4>
+											</li>
+											<li>
+												<h4>曲目 07</h4>
+												<h2>饮血</h2>
+												<h4>04:47</h4>
+											</li>
+											<li>
+												<h4>曲目 08</h4>
+												<h2>冰霜之心</h2>
+												<h4>05:01</h4>
+											</li>
+											<li>
+												<h4>曲目 09</h4>
+												<h2>疾射火炮</h2>
+												<h4>04:14</h4>
+											</li>
+											<li>
+												<h4>曲目 10</h4>
+												<h2>破败王者之刃</h2>
+												<h4>07:01</h4>
+											</li>
+										</ul>
+									</div>
+									<span class="arrow-left prev-btn"></span>
+								</div>
+							</div>
+						</button>
+						<!-- 中间主要显示部分 -->
+						<div class="single_middle" id="single_middle2">
+							<button class="cover">
+								<div class="inner">
+									<div class="inner">
+										<div class="img-carousel">
+											<div class="img-carousel-overflow-overflow">
+												<div class="img-carousel-overflow">
+													<div class="img-wrap overflow-list-wrap">
+														<ul class="imgs" id="imgs2">
+															<li class="img track-thumb" style="background-image: url(images/album/1001.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1002.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1003.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1004.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1005.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1006.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1007.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1008.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1009.jpg)"></li>
+															<li class="img track-thumb" style="background-image: url(images/album/1010.jpg)"></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="single_inf">
+											<div class="overflow-list-wrap">
+												<ul class="single_title" id="single_title2">
+													<li>
+														<h4>曲目 01</h4>
+													</li>
+													<li>
+														<h4>曲目 02</h4>
+													</li>
+													<li>
+														<h4>曲目 03</h4>
+													</li>
+													<li>
+														<h4>曲目 04</h4>
+													</li>
+													<li>
+														<h4>曲目 05</h4>
+													</li>
+													<li>
+														<h4>曲目 06</h4>
+													</li>
+													<li>
+														<h4>曲目 07</h4>
+													</li>
+													<li>
+														<h4>曲目 08</h4>
+													</li>
+													<li>
+														<h4>曲目 09</h4>
+													</li>
+													<li>
+														<h4>曲目 10</h4>
+													</li>
+												</ul>
+											</div>
+											<div class="overflow-list-wrap title-overflow">
+												<ul class="singlename" id="singlename2">
+													<li>
+														<h3>萃取</h3>
+													</li>
+													<li>
+														<h3>凡性的提醒</h3>
+													</li>
+													<li>
+														<h3>女神之泪</h3>
+													</li>
+													<li>
+														<h3>无尽之刃</h3>
+													</li>
+													<li>
+														<h3>亡者的板甲</h3>
+													</li>
+													<li>
+														<h3>海克斯核心 mk-2</h3>
+													</li>
+													<li>
+														<h3>饮血</h3>
+													</li>
+													<li>
+														<h3>冰霜之心</h3>
+													</li>
+													<li>
+														<h3>疾射火炮</h3>
+													</li>
+													<li>
+														<h3>破败王者之刃</h3>
+													</li>
+												</ul>
+											</div>
+											<div class="overflow-list-wrap">
+												<ul class="singletime" id="singletime2">
+													<li>
+														<h4>05:16</h4>
+													</li>
+													<li>
+														<h4>04:04</h4>
+													</li>
+													<li>
+														<h4>04:00</h4>
+													</li>
+													<li>
+														<h4>04:00</h4>
+													</li>
+													<li>
+														<h4>04:50</h4>
+													</li>
+													<li>
+														<h4>03:26</h4>
+													</li>
+													<li>
+														<h4>04:47</h4>
+													</li>
+													<li>
+														<h4>05:01</h4>
+													</li>
+													<li>
+														<h4>04:14</h4>
+													</li>
+													<li>
+														<h4>07:01</h4>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="play-btn-wrap">
+											<a href="#" class="mv_play_border large" id="album_play2">
+												<div class="mv_icon">
+													<img src="images/index/paly.png" class="mv_play_icon normal" id="single_paly_normal2">
+													<img src="images/index/paly.png" class="mv_play_icon hover" id="single_paly_hover2">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</button>
+						</div>
+						<!-- 右切换按钮 -->
+						<button class="single_right" id="bmzw_right_but">
+							<div class="inner">
+								<div class="inner">
+									<div class="next-imgs-wrap overflow-list-wrap">
+										<ul class="next-imgs" id="next-imgs2">
+											<li class="track-thumb" style="background-image: url(images/album/1001.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1002.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1003.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1004.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1005.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1006.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1007.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1008.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1009.jpg);"></li>
+											<li class="track-thumb" style="background-image: url(images/album/1010.jpg);"></li>
+										</ul>
+									</div>
+									<div class="prev-next-overlay"></div>
+									<div class="next-content-wrap overflow-list-wrap">
+										<ul class="nextinf" id="nextinf2">
+											<li>
+												<h4>曲目 01</h4>
+												<h2>萃取</h2>
+												<h4>05:16</h4>
+											</li>
+											<li>
+												<h4>曲目 02</h4>
+												<h2>凡性的提醒</h2>
+												<h4>04:04</h4>
+											</li>
+											<li>
+												<h4>曲目 03</h4>
+												<h2>女神之泪</h2>
+												<h4>04:00</h4>
+											</li>
+											<li>
+												<h4>曲目 04</h4>
+												<h2>无尽之刃</h2>
+												<h4>04:00</h4>
+											</li>
+											<li>
+												<h4>曲目 05</h4>
+												<h2>亡者的板甲</h2>
+												<h4>04:50</h4>
+											</li>
+											<li>
+												<h4>曲目 06</h4>
+												<h2>海克斯核心 mk-2</h2>
+												<h4>03:26</h4>
+											</li>
+											<li>
+												<h4>曲目 07</h4>
+												<h2>饮血</h2>
+												<h4>04:47</h4>
+											</li>
+											<li>
+												<h4>曲目 08</h4>
+												<h2>冰霜之心</h2>
+												<h4>05:01</h4>
+											</li>
+											<li>
+												<h4>曲目 09</h4>
+												<h2>疾射火炮</h2>
+												<h4>04:14</h4>
+											</li>
+											<li>
+												<h4>曲目 10</h4>
+												<h2>破败王者之刃</h2>
+												<h4>07:01</h4>
+											</li>
+										</ul>
+									</div>
+									<span class="arrow-right next-btn"></span>
+								</div>
+							</div>
+						</button>
+						<div class="track-number-carousel-container" id="bmzw-song">
+							<div class="labels">
+								<span class="text">曲目</span>
+							</div>
+							<div class="carousel-wrapper" style="width: 330px;">
+								<div class="carousel owl-carousel owl-loaded">
+									<div class="owl-stage-outer">
+										<div class="owl-stage" style="width: 960px;transform: translate3d(-180px, 0px, 0px);">
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="9">10</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="0">01</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="1">02</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="2">03</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="3">04</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="4">05</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="5">06</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="6">07</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="8">09</button></div>
+											<div class="owl-item cloned active"><button class="track-button" type="button" data-index="9">10</button></div>
+											<div class="owl-item active center"><button class="track-button" type="button" data-index="0">01</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="1">02</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="2">03</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="3">04</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="4">05</button></div>
+											<div class="owl-item active"><button class="track-button" type="button" data-index="5">06</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="6">07</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="8">09</button></div>
+											<div class="owl-item"><button class="track-button" type="button" data-index="9">10</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="0">01</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="1">02</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="2">03</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="3">04</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="4">05</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="5">06</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="6">07</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="7">08</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="8">09</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="9">10</button></div>
+											<div class="owl-item cloned"><button class="track-button" type="button" data-index="0">01</button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 周边 -->
+		<div class="container-fluid page_box" id="commodity-part">
+			<div class="title">
+				<h1 class="title_h1">
+					周边商品
+					<span class="loop-ani-traced-move">周边商品</span>
+				</h1>
+				<h4 class="title_h4 limit_h4">音乐主题周边限量发售</h4>
+			</div>
+			<div class="row commodity_row">
+				<div class="col-sm-12">
+					<div class="commodity_div">
+						<img src="images/index/wallhaven-0j5qzw.png" class="commodity_img">
+					</div>
+					<h2 class="commodity_name">五杀摇滚乐队迷你手办套装</h2>
+					<h1 class="commodity_price"><span class="commodity_span">￥</span>399.00</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- 乐队成员 -->
+		<div class="container-fluid band-members" id="band-part">
+			<div class="title">
+				<!-- <h4 class="title_h4">五杀乐队</h4> -->
+				<h1 class="title_h1">
+					传记
+					<span class="loop-ani-traced-move">传记</span>
+				</h1>
+			</div>
+			<div class="introduce">
+				<div class="inner">
+					<div class="intro">
+						<div class="section-body">
+							<p>你见过金属的真实之音归于平静，环绕的是那微弱轻语的振颤和音。但请仔细倾听那些轻语，你会从中发现真理之种。四种声线。五位毁灭的先驱，耐心等待着崛起的时机。时机到来之日，这五位就会永远地改变你的世界。音波的破坏力已达到空前的高度。这些声线已经击杀了巨龙并宰杀了男爵。他们在正义之地纵情肆虐，将符文大陆焚为平地，让数以百万计的提莫死于非命。当他们到来时，他们的金属声波就会侵袭人们的灵魂并惩治人们的肉身。你将观其容而退缩，闻其名而颤抖。</p>
+						</div>
+						<div class="quote">他们就是……五杀摇滚乐队。</div>
+					</div>
+				</div>
+			</div>
+			<div class="band-member">
+				<div class="inner">
+					<div class="inner">
+						<div class="part image img_float">
+							<div class="inner" style="right: -565px;">
+								<img class="image" src="images/index/mordekaiser.jpg">
+							</div>
+						</div>
+						<div class="part info">
+							<div class="inner info_margin">
+								<h1 class="loop-ani-skew">
+									莫德凯撒
+									<span class="loop-ani-traced-move">莫德凯撒</span>
+								</h1>
+								<h2 class="smaller">“我的设备不仅能飙到十一分。而且能******燃爆十一分。”</h2>
+								<p>一座崇山压在了莫德凯撒身上，那时的他认为这是金属之神的启示，暗示他将金属洒满人间的邪恶职责已经大功告成，而他也已经成为了全金属。他知道自己有朝一日必将重生，但随着时间流逝，他的等待变成了沉睡。压在他身上的这座高山其实是黑金属和诅咒的巨石。在山的最高峰，岩石中伸出了一根崎岖不平的黑曜石斧柄。这诅咒之地开始传出许多传说，传说只要有人从这座山中拔出这柄斧头，此人就是金属新纪元的先驱者。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="band-member">
+				<div class="inner">
+					<div class="inner">
+						<div class="part image">
+							<div class="inner" style="right: -195px;">
+								<img class="image" src="images/index/karthus.jpg">
+							</div>
+						</div>
+						<div class="part info info_float">
+							<div class="inner">
+								<h1 class="loop-ani-skew">
+									卡尔萨斯
+									<span class="loop-ani-traced-move">卡尔萨斯</span>
+								</h1>
+								<h2 class="smaller">“谁与我为敌，此刻即死期。”</h2>
+								<p>卡尔萨斯在比尔吉沃特开始了一段独唱生涯，在葬礼上颂唱挽歌，糊口度日。他的工作对比尔吉沃特的居民产生了意外的健康促进作用，因为人们都开始料理自己的后事，而不用顾虑如何把家人送上艰难的旅程。后来，卡尔萨斯开始在肮脏的小酒馆里演唱，他的演唱伴着海盗们厮杀以后弥漫着酒气的残局，对于海边的简陋酒馆来说，挽歌的气氛最适合了。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="band-member">
+				<div class="inner">
+					<div class="inner">
+						<div class="part image img_float">
+							<div class="inner" style="left: -365px;">
+								<img class="image" src="images/index/yorick.jpg">
+							</div>
+						</div>
+						<div class="part info">
+							<div class="inner info_margin">
+								<h1 class="loop-ani-skew">
+									约里克
+									<span class="loop-ani-traced-move">约里克</span>
+								</h1>
+								<h2 class="smaller">“多给点贝斯。贝斯音量开大。*****把贝斯音量开大。再大。大。”</h2>
+								<p>为了尝试新鲜事物，约里克将自己的度假地点选在了烈日当空的恕瑞玛废土。阳光对他来说是新鲜事物，是他唯恐避之不及的事物，因为担心人们看到这张惊世骇人的丑陋面孔。他独一无二的贝斯能够轻易粉碎恕瑞玛松脆的磐石，但经常会带来一些副作用，将沙丘化为流动的漩涡，波及远处勘探古墓的劳工，将他们活埋。对于那些不幸的冤魂，这样的结局已算得上万幸，因为他们不需要再忍受这人多一秒，忍受这动摇滚石的声音。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="band-member">
+				<div class="inner">
+					<div class="inner">
+						<div class="part image">
+							<div class="inner" style="left: -325px;">
+								<img class="image" src="images/index/sona.jpg">
+							</div>
+						</div>
+						<div class="part info info_float">
+							<div class="inner">
+								<h1 class="loop-ani-skew">
+									娑娜
+									<span class="loop-ani-traced-move">娑娜</span>
+								</h1>
+								<h2 class="smaller">“...!”</h2>
+								<p>娑娜最热切的渴望就是打造一出冲破天际的合奏摇滚音乐剧，在世界上最宏伟的神庙（以及其他任何地方）巡回演出。但是没有任何乐器能够产生令她满意的宇宙共鸣音。娑娜乘上了“狂蟒盛宴”号，航向火山群岛的毁灭之旅，用不羁的音浪冲击岛屿的土地。她释放了造物之天籁，音阶之强大，甚至穿越了世界，淹没了无数大陆。（绝无夸张成分，一场在大西州筹备的音乐会就使因此被迫取消的）。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="band-member">
+				<div class="inner">
+					<div class="inner">
+						<div class="part image img_float">
+							<div class="inner" style="right: -310px;">
+								<img class="image" src="images/index/olaf.jpg">
+							</div>
+						</div>
+						<div class="part info">
+							<div class="inner info_margin">
+								<h1 class="loop-ani-skew">
+									奥拉夫
+									<span class="loop-ani-traced-move">奥拉夫</span>
+								</h1>
+								<h2 class="smaller">“给我一套新锣、嗵嗵、军鼓、双踩，还有牛铃。对，基本全套都换新的。旧的破了。烧了。是的，被我烧了。”</h2>
+								<p>奥拉夫原以为那将是为自己送终的绝命演出，所以从那以后，他就努力寻找符文之地最致命的烈酒，想把自己灌死。最后他来到了祖安的深处，痛饮炽烈的地沟鸡尾酒，吹嘘自己曾经的光荣，挑衅炼金外壳的混混们试试身手。很快奥拉夫就被卷入了地下机器人搏击俱乐部。他的新对手是炼金能量驱动的巨人，后来意外发现自己敲鼓的天赋同样适合敲打机械人，一敲就碎。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="band-member">
+				<div class="inner">
+					<div class="inner">
+						<div class="part image">
+							<div class="inner" style="left: -750px;">
+								<img class="image" src="images/index/kayle.jpg">
+							</div>
+						</div>
+						<div class="part info info_float">
+							<div class="inner">
+								<h1 class="loop-ani-skew">
+									凯尔
+									<span class="loop-ani-traced-move">凯尔</span>
+								</h1>
+								<h2 class="smaller">“炽热的熔岩，流淌自铜头铁臂的金属之神，流淌在谁的血管中？唯有此人，可与我一见。”</h2>
+								<p>一位金色的战斗女神离开了自己充满纷争的世界，她就是凯尔，乘着一条蜿蜒长蛇般闪闪发光的巨龙，来到了符文之地。她要找寻盟友，共同加入一场史诗战争，对抗她丧失信仰的姊妹率领的恶魔大军。她没能在地球上找到铁意的战士，于是来到符文之地继续寻找金属的战士。她用宏大的、具有象征意义的金属歌剧发号施令，而她无尽忧伤的咏叹调则刺穿了所有听众的心灵。和心脏。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 巡回演出 -->
+		<div class="container-fluid page_box" id="tour-part">
+			<div class="title">
+				<h4 class="title_h4">五杀乐队</h4>
+				<h1 class="title_h1 tour">
+					巡回演出
+					<span class="loop-ani-traced-move">巡回演出</span>
+				</h1>
+			</div>
+			<div class="row album-row">
+				<div class="col-sm-12">
+					<div class="subtitle_div">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="images/Tour/wallhaven-lq726q.jpg" class="tour_img">
+								</div>
+								<div class="item">
+									<img src="images/Tour/wallhaven-4v9kd3.jpg" class="tour_img">
+								</div>
+								<div class="item">
+									<img src="images/Tour/wallhaven-mpm171.png" class="tour_img">
+								</div>
+								<div class="item">
+									<img src="images/Tour/wallhaven-yjrvd7.jpg" class="tour_img">
+								</div>
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="end">
+				<h1 class="title_h1">
+					敬请期待
+					<span class="loop-ani-traced-move">敬请期待</span>
+				</h1>
+			</div>
+		</div>
+
+		<!-- 页脚 -->
+		<div class="container-fluid footer_box">
+			<p>
+				<a href="#">关于咕咕</a>
+				<span>|</span>
+				<a href="#">About GuGu</a>
+				<span>|</span>
+				<a href="#">服务条款</a>
+				<span>|</span>
+				<a href="#">用户服务协议</a>
+				<span>|</span>
+				<a href="#">隐私政策</a>
+				<span>|</span>
+				<a href="#">权利声明</a>
+				<span>|</span>
+				<a href="#">客服中心</a>
+				<span>|</span>
+				<a href="#">网站导航</a>
+			</p>
+			<p>
+				Copyright © 2019 - 2020 GuGu
+				<a href="#">All Rights Reserved.</a>
+			</p>
+			<p>
+				咕咕
+				<a href="#">版权所有</a>
+				<a href="#">咕咕网络文化经营许可证</a>
+			</p>
+		</div>
+	</body>
+</html>
